@@ -1,0 +1,20 @@
+export const siteSettings = {
+  name: "siteSettings",
+  title: "Site Settings",
+  type: "document",
+  fields: [
+    { name: "isLive", title: "We Are Live (show banner)", type: "boolean" },
+    { name: "liveStreamUrl", title: "Live Stream URL", type: "url" },
+    { name: "youtubeChannelUrl", title: "YouTube Channel URL", type: "url" },
+    { name: "phone", title: "Phone", type: "string" },
+    { name: "email", title: "Email", type: "string" },
+    { name: "address", title: "Address", type: "string" },
+    { name: "whatsappNumber", title: "WhatsApp Number (with country code)", type: "string" },
+    { name: "bankTitle", title: "Bank Account Title", type: "string" },
+    { name: "bankName", title: "Bank Name", type: "string" },
+    { name: "bankAccountNo", title: "Bank Account Number", type: "string" },
+    { name: "bankIban", title: "IBAN", type: "string" },
+    { name: "facebookUrl", title: "Facebook URL", type: "url" },
+    { name: "instagramUrl", title: "Instagram URL", type: "url" },
+  ],
+};

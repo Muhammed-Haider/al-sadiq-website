@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-green-primary: #1a5c38;
+  --color-green-dark: #0f3320;
+  --color-green-darker: #0c2a1b;
+  --color-green-mid: #143f29;
+  --color-green-light: #eef5f0;
+  --color-gold: #c9a227;
+  --color-gold-light: #e3c766;
+  --color-gold-muted: rgba(201, 162, 39, 0.16);
+  --color-cream: #fbfaf6;
+  --color-border: #efe9da;
+  --color-border-light: #f0ece0;
+  --color-red-live: #c0392b;
+  --color-body: #4a4a4a;
+  --color-muted: #6a6a6a;
+  --color-dark-heading: #1a3026;
+  --font-poppins: "Poppins", system-ui, sans-serif;
+  --font-urdu: "Noto Nastaliq Urdu", serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins);
+  color: var(--color-body);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.urdu {
+  font-family: var(--font-urdu);
+  direction: rtl;
+  line-height: 2.1;
+}
+
+@keyframes livepulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes livepulse2 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 9px rgba(192, 57, 43, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(192, 57, 43, 0);
+  }
+}
+
+@keyframes asfadein {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadein {
+  animation: asfadein 0.7s ease both;
+}
+
+.pulse-live {
+  animation: livepulse 1.6s infinite;
+}
+
+.pulse-live2 {
+  animation: livepulse2 1.6s infinite;
 }
